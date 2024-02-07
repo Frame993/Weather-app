@@ -143,6 +143,16 @@ hr {
     margin-top: 10px;
 }
 
+.empty {
+    display: none;
+    color: rgba(255, 0, 0, 0.712);
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
 @media screen and (max-width: 500px) {
     .details {
         width: 100%;

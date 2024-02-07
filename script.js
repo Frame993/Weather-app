@@ -11,7 +11,16 @@ async function checkWeather(city) {
     if (response.status == 404) {
         document.querySelector('.error').style.display = 'flex'
         document.querySelector('.weather').style.display = 'none'
-    } else {
+        document.querySelector('.empty').style.display = 'none'
+    } 
+    
+    else if (response.status == 400) {
+        document.querySelector('.empty').style.display = 'flex'
+        document.querySelector('.weather').style.display = 'none'
+        document.querySelector('.error').style.display = 'none'
+    }
+    
+    else {
         var data = await response.json();
 
         console.log(data);
@@ -40,8 +49,16 @@ async function checkWeather(city) {
         }
         document.querySelector('.weather').style.display = 'flex'
         document.querySelector('.error').style.display = 'none'
+        document.querySelector('.empty').style.display = 'none'
     }
 }
+
+// El event debe ocurrir en el campo de input no en el boton 
+searchBox.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        checkWeather(searchBox.value);
+    }
+});
 
 searchBtn.addEventListener('click', () => {
     checkWeather(searchBox.value);
