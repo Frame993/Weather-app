@@ -7,7 +7,7 @@
 }
 
 body {
-    background: #222;
+    background: #1869FF;
     display: flex;
     justify-content: center;
 }
@@ -19,7 +19,8 @@ body {
     border-radius: 16px;
     width: 90%;
     max-width: 470px;
-    background: linear-gradient(135deg, #00feba, #5b548a);
+    /* background: linear-gradient(135deg, #00feba, #5b548a); */
+    /* background: white; */
     color: #ffffff;
     margin: 20px;
     padding: 40px;
@@ -32,26 +33,31 @@ body {
     justify-content: space-between;
     position: relative;
     /* relative */
+    /* border: 1px solid #1869FF; */
 }
 
 .search input {
+    position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
     border: 0;
     outline: 0;
-    background: #ffffff;
+    /* background: #ffffff; */
     /* color: #555; */
     padding: 10px 25px;
     height: 60px;
     border-radius: 30px;
     font-size: 18px;
     width: 100%;
+    border: 1px solid #1869FF;
+    z-index: 1;
 }
 
 .search button {
     display: flex;
     position: absolute;
     /* absolute */
-    top: 0;
     right: 0;
     align-items: center;
     justify-content: center;
@@ -59,11 +65,15 @@ body {
     outline: 0;
     background: #ffffff;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 58px;
+    height: 58px;
     cursor: pointer;
+    /* border: 1px solid #1869FF; */
+    z-index: 99;
 }
-
+.search button:hover {
+    background: #d3d3d3;
+}
 .search button img {
     width: 16px;
 }
@@ -80,18 +90,18 @@ body {
 
 /* added */
 .weather-icon {
-    width: 170px;
+    width: 150px;
     margin-top: 30px;
 }
 
 .weather h1 {
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 500;
 }
 
 .weather h2 {
     padding: 5px 20px;
-    outline: 1px solid #ffffff;
+    /* outline: 1px solid #ffffff; */
     font-size: 28px;
     font-weight: 400;
     margin-top: -10px;
@@ -136,7 +146,7 @@ hr {
 
 .error {
     display: none;
-    color: rgba(255, 0, 0, 0.712);
+    color: white;
     text-align: left;
     margin-left: 10px;
     font-size: 14px;
@@ -145,7 +155,7 @@ hr {
 
 .empty {
     display: none;
-    color: rgba(255, 0, 0, 0.712);
+    color: white;
     text-align: left;
     margin-left: 10px;
     font-size: 14px;
